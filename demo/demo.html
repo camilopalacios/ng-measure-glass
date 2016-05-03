@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html ng-app="MeasureGlassApp">
+  <head>
+    <title>Water Glass</title>
+    <script type="text/javascript" src="../bower_components/d3/d3.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../dist/ng-measure-glass.min.js"></script>
+    <script type="text/javascript" src="./demo.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body ng-controller="GlassController as glassCtrl">
+    <!-- Input section -->
+    <div class="section">
+      <h1>Settings</h1>
+      <div class="category" align="right">
+        <label for="bar2">Value:</label>
+        <input class="rangeBar" name="bar2" type="range" ng-attr-min="{{glassCtrl.min}}" ng-attr-max="{{glassCtrl.max}}" ng-model="glassCtrl.values[2]">
+        <label for="name2">Name:</label>
+        <input class="inputText" id="name2" type="text" ng-model="glassCtrl.names[2]">
+        <label for="color2">Color:</label>
+        <input class="inputText" id="color2" type="text" ng-model="glassCtrl.colors[2]">
+      </div>
+      <div class="category" align="right">
+        <label for="bar1">Value:</label>
+        <input class="rangeBar" name="bar1" type="range" ng-attr-min="{{glassCtrl.min}}" ng-attr-max="{{glassCtrl.max}}" ng-model="glassCtrl.values[1]">
+        <label for="name2">Name:</label>
+        <input class="inputText" id="name2" type="text" ng-model="glassCtrl.names[1]">
+        <label for="color1">Color:</label>
+        <input class="inputText" id="color1" type="text" ng-model="glassCtrl.colors[1]">
+      </div>
+      <div class="category" align="right">
+        <label for="bar2">Value:</label>
+        <input class="rangeBar" name="bar2" type="range" ng-attr-min="{{glassCtrl.min}}" ng-attr-max="{{glassCtrl.max}}" ng-model="glassCtrl.values[0]">
+        <label for="name2">Name:</label>
+        <input class="inputText" id="name2" type="text" ng-model="glassCtrl.names[0]">
+        <label for="color2">Color:</label>
+        <input class="inputText" id="color2" type="text" ng-model="glassCtrl.colors[0]">
+      </div>
+    </div>
+
+    <!-- Display Section -->
+    <div class="section">
+      <h1 align="center">Measuring Glass</h1>
+      <div id="viewportDiv" ng-mousemove="glassCtrl.onGlass($event,'legend')"  ng-mouseleave="glassCtrl.leaveGlass($event,'legend')">
+        <ui-measure-glass values="glassCtrl.values" min="glassCtrl.min" max="glassCtrl.max" colors="glassCtrl.colors"></ui-measure-glass>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div id="legend" ng-hide="glassCtrl.hide">
+      <ul ng-repeat="n in glassCtrl.names | reverse track by $index">
+        <li style="list-style-type:square; color:{{glassCtrl.colors[(glassCtrl.colors.length - 1) - $index]}};"><p>{{n + ": " + glassCtrl.values[(glassCtrl.values.length - 1) - $index]}}</p></li>
+      </ul>
+
+    </div>
+  </body>
+</html>

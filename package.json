@@ -1,0 +1,31 @@
+{
+  "name": "ng-measure-glass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "demo/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camilopalacios/ng-measure-glass.git"
+  },
+  "keywords": [
+    "angular",
+    "d3",
+    "svg",
+    "measure-glass"
+  ],
+  "author": "camilopalacios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camilopalacios/ng-measure-glass/issues"
+  },
+  "homepage": "https://github.com/camilopalacios/ng-measure-glass#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-iife": "^0.3.0",
+    "gulp-minify": "0.0.11",
+    "gulp-rename": "^1.2.2"
+  }
+}

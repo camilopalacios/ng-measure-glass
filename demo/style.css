@@ -1,0 +1,40 @@
+div.section{
+  vertical-align: top;
+  width: 400px;
+  height: 400px;
+  padding-top: 2%;
+  padding-left: 5%;
+  display: inline-block;
+}
+
+div.category{
+  padding: 8px;
+  margin-top:2px;
+}
+
+#legend{
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  background: white;
+  width: 200px;
+  position: fixed;
+
+}
+
+#viewportDiv{
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.rangeBar{
+  width: 40%;
+}
+
+.inputText{
+  width: 30%;
+}
+
+p{
+  color: black;
+}

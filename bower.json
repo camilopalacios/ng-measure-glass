@@ -1,0 +1,30 @@
+{
+  "name": "ng-measure-glass",
+  "description": "Angular.js directive to draw a measure glass component powered by d3.js",
+  "main": "demo/index.html",
+  "authors": [
+    "camilopalacios"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "d3",
+    "svg",
+    "measure-glass"
+  ],
+  "homepage": "https://github.com/camilopalacios/ng-measure-glass",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "d3": "^3.5.16"
+  }
+}
