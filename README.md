@@ -51,6 +51,14 @@ $ bower install ng-measure-glass --save
   <div>
     <ui-gauge value="gaugeCtrl.value" intervals="gaugeCtrl.intervals" options="gaugeCtrl.options"></ui-gauge>
   </div>
+  <!-- Legend Div -->
+  <div id="legend" ng-hide="glassCtrl.hide">
+    <ul ng-repeat="n in glassCtrl.names | reverse track by $index">
+      <li style="list-style-type:square; color:{{glassCtrl.colors[(glassCtrl.colors.length - 1) - $index]}};">
+        <p>{{n + ": " + glassCtrl.values[(glassCtrl.values.length - 1) - $index]}}</p>
+      </li>
+    </ul>
+  </div>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
