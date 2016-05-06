@@ -52,7 +52,7 @@
       <ul ng-repeat="n in glassCtrl.names | reverse track by $index">
         <li style="list-style-type:square; color:{{glassCtrl.colors[(glassCtrl.colors.length - 1) - $index]}};"><p>{{n + ": " + glassCtrl.values[(glassCtrl.values.length - 1) - $index]}}</p></li>
       </ul>
-
     </div>
+
   </body>
 </html>

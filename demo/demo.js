@@ -36,7 +36,7 @@ function GlassController($scope){
   return controller;
 
   function updateValues(values, min, max){
-    var v = [], sum=0;
+    var sum=0;
     for(var i in values){
       sum += parseInt(values[i],10);
     }
