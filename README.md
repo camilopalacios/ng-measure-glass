@@ -55,7 +55,7 @@ $ bower install ng-measure-glass --save
   <div id="legend" ng-hide="glassCtrl.hide">
     <ul ng-repeat="n in glassCtrl.names | reverse track by $index">
       <li style="list-style-type:square; color:{{glassCtrl.colors[(glassCtrl.colors.length - 1) - $index]}};">
-        <p>{{n + ": " + glassCtrl.values[(glassCtrl.values.length - 1) - $index]}}</p>
+        <p style="color:black;">{{n + ": " + glassCtrl.values[(glassCtrl.values.length - 1) - $index]}}</p>
       </li>
     </ul>
   </div>
