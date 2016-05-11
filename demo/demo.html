@@ -2,8 +2,8 @@
 <html ng-app="MeasureGlassApp">
   <head>
     <title>Water Glass</title>
-    <script type="text/javascript" src="../../d3/d3.min.js"></script>
-    <script type="text/javascript" src="../../angular/angular.min.js"></script>
+    <script type="text/javascript" src="../bower_components/d3/d3.min.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="../dist/ng-measure-glass.min.js"></script>
     <script type="text/javascript" src="./demo.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -13,32 +13,15 @@
     <!-- Input section -->
     <div class="section">
       <h1>Settings</h1>
-      <div class="category" align="right">
+      <div class="category" align="right" ng-repeat="n in glassCtrl.values track by $index">
         <label for="bar2">Value:</label>
-        <input class="rangeBar" name="bar2" type="range" ng-attr-min="{{glassCtrl.min}}" ng-attr-max="{{glassCtrl.max}}" ng-model="glassCtrl.values[2]">
+        <input class="rangeBar" name="bar2" type="range" ng-attr-min="{{glassCtrl.min}}" ng-attr-max="{{glassCtrl.max}}" ng-model="glassCtrl.values[$index]">
         <label for="name2">Name:</label>
-        <input class="inputText" id="name2" type="text" ng-model="glassCtrl.names[2]">
+        <input class="inputText" id="name2" type="text" ng-model="glassCtrl.names[$index]">
         <label for="color2">Color:</label>
-        <input class="inputText" id="color2" type="text" ng-model="glassCtrl.colors[2]">
-      </div>
-      <div class="category" align="right">
-        <label for="bar1">Value:</label>
-        <input class="rangeBar" name="bar1" type="range" ng-attr-min="{{glassCtrl.min}}" ng-attr-max="{{glassCtrl.max}}" ng-model="glassCtrl.values[1]">
-        <label for="name2">Name:</label>
-        <input class="inputText" id="name2" type="text" ng-model="glassCtrl.names[1]">
-        <label for="color1">Color:</label>
-        <input class="inputText" id="color1" type="text" ng-model="glassCtrl.colors[1]">
-      </div>
-      <div class="category" align="right">
-        <label for="bar2">Value:</label>
-        <input class="rangeBar" name="bar2" type="range" ng-attr-min="{{glassCtrl.min}}" ng-attr-max="{{glassCtrl.max}}" ng-model="glassCtrl.values[0]">
-        <label for="name2">Name:</label>
-        <input class="inputText" id="name2" type="text" ng-model="glassCtrl.names[0]">
-        <label for="color2">Color:</label>
-        <input class="inputText" id="color2" type="text" ng-model="glassCtrl.colors[0]">
+        <input class="inputText" id="color2" type="text" ng-model="glassCtrl.colors[$index]">
       </div>
     </div>
-
     <!-- Display Section -->
     <div class="section">
       <h1 align="center">Measuring Glass</h1>
